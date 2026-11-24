@@ -1,0 +1,75 @@
+# Local dev stack — mirrors the real Railway topology (frontend + Express
+# API + Postgres) but with hot reload so code changes show up instantly.
+#
+# Usage:
+#   docker compose up --build
+#   open http://localhost:5173
+#
+# - web: Vite dev server, HMR on, your local src/ is bind-mounted in so
+#   edits on your machine are picked up immediately (no rebuild needed).
+# - api: server.js (the same Express API Railway runs), talking to the
+#   local `db` service instead of Railway's managed Postgres.
+# - db: throwaway local Postgres so /api/credentials, login, etc. all work
+#   the same as in production. Data lives in the `db-data` volume and
+#   survives `docker compose down` (use `down -v` to wipe it).
+#
+# Facebook/Instagram env vars: copy .env.example to .env first if you need
+# VITE_FB_APP_ID set; docker-compose reads it into the web service below.
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: npm run dev:web -- --host 0.0.0.0
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - API_PROXY_TARGET=http://api:8787
+    env_file:
+      - path: .env
+        required: false
+    depends_on:
+      - api
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: npm run server
+    ports:
+      - "8787:8787"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/script_studio
+      - PORT=8787
+    # ANTHROPIC_API_KEY / NETLIFY_AUTH_TOKEN for landing pages (see .env.example)
+    env_file:
+      - path: .env
+        required: false
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=script_studio
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  db-data:

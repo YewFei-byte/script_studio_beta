@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ---- Palette (Presoft brand) ---- */
+  --ink-900: #3B322A;
+  --ink-700: #5C5045;
+  --ink-500: #8A7E71;
+  --ink-300: #B7A99A;
+
+  --accent-violet: #F2AA24;
+  --accent-violet-soft: #F6C463;
+  --accent-mint: #00D697;
+  --accent-coral: #D90000;
+
+  --bg-base: #F2F1EF;
+
+  --glass-fill: rgba(255, 255, 255, 0.56);
+  --glass-fill-strong: rgba(255, 255, 255, 0.76);
+  --glass-fill-soft: rgba(255, 255, 255, 0.36);
+  --glass-border: rgba(255, 255, 255, 0.7);
+  --glass-shadow: 0 8px 32px rgba(80, 69, 56, 0.10), 0 1.5px 0 rgba(255,255,255,0.7) inset;
+
+  /* ---- Type ---- */
+  --font-display: 'Space Grotesk', 'Inter', 'Helvetica Neue', Helvetica, sans-serif;
+  --font-body: 'Inter', 'Helvetica Neue', Helvetica, sans-serif;
+
+  --radius-lg: 30px;
+  --radius-md: 20px;
+  --radius-sm: 14px;
+
+  /* ---- Motion ---- */
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink-900);
+  background: var(--bg-base);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+p { margin: 0; }
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input, textarea, select {
+  transition: border-color 0.2s var(--ease-smooth), box-shadow 0.2s var(--ease-smooth), background 0.2s var(--ease-smooth);
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent-violet) !important;
+  box-shadow: 0 0 0 3px rgba(242,170,36,0.14);
+}
+
+::selection {
+  background: var(--accent-violet-soft);
+  color: white;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(242,170,36,0.3); border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+:focus-visible {
+  outline: 2px solid var(--accent-violet);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.aurora-field {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: var(--bg-base);
+}
+
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
+  will-change: transform;
+}
+
+.aurora-blob.b1 {
+  width: 620px; height: 620px;
+  background: radial-gradient(circle at 30% 30%, var(--accent-violet-soft), transparent 70%);
+  top: -180px; left: -120px;
+  animation: float1 22s ease-in-out infinite;
+}
+.aurora-blob.b2 {
+  width: 520px; height: 520px;
+  background: radial-gradient(circle at 60% 40%, var(--accent-mint), transparent 70%);
+  bottom: -160px; right: -100px;
+  animation: float2 26s ease-in-out infinite;
+}
+.aurora-blob.b3 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle at 50% 50%, var(--accent-coral), transparent 70%);
+  top: 40%; left: 50%;
+  animation: float3 30s ease-in-out infinite;
+  opacity: 0.22;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(60px, 80px) scale(1.08); }
+}
+@keyframes float2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-70px, -50px) scale(1.05); }
+}
+@keyframes float3 {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-45%, -55%) scale(1.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-blob { animation: none !important; }
+  *:not(.spinner) { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bubbleRise {
+  0% { transform: translateY(0) scale(1); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-115vh) scale(1.15); opacity: 0; }
+}
+
+.spinner {
+  animation: spin 0.9s linear infinite;
+  transform-origin: center;
+}
+
+/* ---- Interactive polish ---- */
+.gbtn {
+  transition: transform 0.2s var(--ease-smooth), box-shadow 0.2s var(--ease-smooth), opacity 0.2s var(--ease-smooth), filter 0.2s var(--ease-smooth);
+}
+.gbtn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+.gbtn:active:not(:disabled) {
+  transform: translateY(0) scale(0.97);
+}
+.gbtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.gpill {
+  transition: all 0.2s var(--ease-smooth);
+}
+.gpill:hover {
+  transform: translateY(-1px);
+}
+
+.glass-card {
+  transition: box-shadow 0.25s var(--ease-smooth), transform 0.25s var(--ease-smooth);
+}
+
+.generate-bubble {
+  transition: box-shadow 0.25s var(--ease-smooth);
+}
+.generate-bubble:hover {
+  box-shadow: 0 26px 60px rgba(0,0,0,0.22), inset 0 2px 12px rgba(255,255,255,0.45);
+}
+
+.side-nav-item:hover {
+  background: rgba(242,170,36,0.08) !important;
+}
+
+/* Settings → Brand: form + preview side by side, stacked on narrow screens. */
+@media (max-width: 860px) {
+  .brand-grid { grid-template-columns: 1fr !important; }
+}
+
+/* Small inline loading icon (e.g. Settings → API status badges). */
+.spin { animation: spin 0.9s linear infinite; }
+
+/* Settings lists: the trash icon on a row turns red on hover. */
+.row-delete:hover { color: var(--accent-coral) !important; background: rgba(217,0,0,0.08); }
+
+/* Gentle "working on it" pulse (e.g. landing page generation preview). */
+@keyframes pulseSoft { 0%,100% { opacity:.55 } 50% { opacity:.95 } }
+.pulse-soft { animation: pulseSoft 1.8s ease-in-out infinite; }
+
+/* Landing page editor: hide the section list on narrow screens. */
+@media (max-width: 1000px) {
+  .lp-editor-body { grid-template-columns: minmax(0,1fr) 280px !important; }
+  .lp-editor-body > aside:first-child { display: none; }
+}
+.outline-row .outline-actions { opacity: 0; transition: opacity .15s; }
+.outline-row:hover .outline-actions, .outline-row:focus-within .outline-actions { opacity: 1; }
+
+/* Skeleton placeholders while something is generated (src/components/Skeleton.jsx).
+   A light sweep normally; with reduced motion (e.g. Windows "Animation effects"
+   off, which the rule near the top otherwise freezes) a soft fade instead. */
+.skeleton {
+  background: linear-gradient(90deg, rgba(80,69,56,0.07) 25%, rgba(80,69,56,0.15) 37%, rgba(80,69,56,0.07) 63%);
+  background-size: 400% 100%;
+  animation: skeletonSweep 1.4s ease infinite;
+}
+@keyframes skeletonSweep { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } }
+@media (prefers-reduced-motion: reduce) {
+  .skeleton { background: rgba(80,69,56,0.12); animation: pulseSoft 1.8s ease-in-out infinite !important; animation-duration: 1.8s !important; }
+}

@@ -1,0 +1,54 @@
+Landing Page Generation Requirement — 32 oz TreeSaver™ Bowl
+==============================================================
+
+PRODUCT NAME
+------------
+32 oz TreeSaver™ Bowl
+
+ABOUT / WHAT IT DOES
+---------------------
+A sustainable food-service bowl made from 100% renewable natural
+resources — a fiber base with PLA lamination that keeps oils and liquids
+from soaking through, so it holds up for pasta, soup, salads, and sushi in
+both dine-in and takeout/delivery settings. It's oven-safe (to 425°F),
+microwave-safe, and freezer-safe, and composts in a commercial composter
+in 60–90 days after use. Sized at 32 oz, it's UltraGreen's most versatile
+bowl — the one operators reach for across the widest range of menu items.
+
+WHY IT MATTERS / PRIMARY BENEFIT
+-----------------------------------
+Fewer SKUs to stock, fewer containers that fail mid-service, and a
+genuine sustainability story to put in front of customers — without
+sacrificing the performance a busy kitchen needs (leak-proof, oven-to-
+freezer range).
+
+SECTIONS TO INCLUDE
+--------------------
+1. Hero — product name, one-line hook ("One bowl. Every dish. Zero
+   compromise."), primary CTA button.
+2. Benefits — leak-proof, oven/microwave/freezer safe, compostable in
+   60–90 days, 100% renewable fiber + PLA lining. (3–4 short benefit
+   tiles, icon + one line each.)
+3. Use cases — pasta, soup, salads, sushi; dine-in and delivery.
+4. Specs — 32 oz capacity, 250 units/case, $76.75/case, pairs with the
+   32 oz Clear Recycled PET Lid (sold separately).
+5. Sustainability — FDA approved, certified compostable, commercial
+   composter, 60–90 days. Keep the recyclable-lid vs. compostable-bowl
+   distinction accurate (see Marketing SOP).
+6. CTA footer — "Request a Sample" as primary, "Shop Now" as secondary.
+
+THEME / LANGUAGE
+------------------
+Light theme, English copy, clean and natural — kraft/green accent tones
+reflecting the plant-based materials, per the Marketing SOP's visual
+direction.
+
+CALL TO ACTION
+--------------
+Primary: "Request a Sample"
+Secondary / buy link: "Shop Now"
+
+LINKS (for the demo — replace with real links when this goes live)
+---------------------------------------------------------------------
+Product link: https://ultragreenpackaging.com/product/32-oz-treesaver-bowl/
+Category link: https://ultragreenpackaging.com/product-category/bowls-and-lids/

@@ -1,0 +1,16 @@
+# Dev image: runs the Vite dev server with hot module reload against your
+# live source (bind-mounted by docker-compose.yml), so edits to files under
+# src/ show up in the browser immediately, same as running `npm run dev`
+# on the host. Not what gets deployed — see Dockerfile for that.
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+RUN npm install
+
+COPY . .
+
+EXPOSE 5173 8787
+
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]

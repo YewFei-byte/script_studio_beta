@@ -1,0 +1,71 @@
+UltraGreen Sustainable Packaging & Products — Marketing SOP
+==============================================================
+
+1. WHO WE ARE
+--------------
+UltraGreen Sustainable Packaging & Products manufactures earth-friendly,
+renewable food packaging for the food service industry — pizzerias, sushi
+restaurants, catering operations, delis, and other restaurants that need
+compostable takeout and dine-in containers. Our mission is to be the
+premier manufacturer of sustainable, earth-friendly food packaging made
+from renewable resources, and to become a worldwide leader in
+biodegradable, compostable food packaging.
+
+Brand tagline: "Be sustainable."
+Category tagline: "Sustainable packaging for your clients."
+
+2. BRAND VOICE
+--------------
+- Tone: professional yet approachable. We are the reliable, knowledgeable
+  supplier — not preachy or guilt-tripping about sustainability.
+- Balance two things in every message: environmental credentials AND
+  practical, everyday performance (freezable, microwaveable, leak-proof,
+  oven-safe). Never sell eco-friendliness alone — always pair it with a
+  functional benefit a busy kitchen actually cares about.
+- Speak to operators (restaurant owners, kitchen managers, caterers), not
+  end consumers — they're buying by the case, thinking about cost,
+  durability, and whether it'll hold up in a delivery bag.
+- Keep claims accurate and specific. Prefer concrete numbers ("composts in
+  60–90 days in a commercial composter", "oven-safe to 425°F") over vague
+  claims ("eco-friendly", "green") used on their own.
+
+3. MATERIALS & CLAIMS — USE CAREFULLY
+--------------------------------------
+- Core materials: sugarcane fiber (bagasse), bamboo, and other tree-free,
+  renewable plant fiber, often with a PLA (plant-based plastic) lining for
+  leak/oil resistance. Recycled PET is used for clear lids.
+- FDA approved. Certified compostable.
+- Compostability claim to use: "commercially compostable" — always mention
+  "commercial composter" rather than implying backyard composting unless a
+  specific product page confirms that.
+- Do not claim "recyclable" for the fiber bowls themselves — only the clear
+  PET lids are recyclable. Keep these two claims separate and correct.
+
+4. PREFERRED LANGUAGE
+----------------------
+- CTA verbs: "Shop Now", "Request a Sample", "Get the Catalog", "Switch to Sustainable".
+- Avoid: "eco warrior", "save the planet", "guilt-free" — too preachy for a
+  B2B food-service audience.
+- Lead with the functional benefit relevant to the product (leak-proof,
+  oven-safe, freezer-safe, holds up in delivery), THEN the sustainability
+  story, then the CTA.
+- When in doubt, favor a confident, solutions-first tone: "durable enough
+  for delivery, kind enough for the planet" rather than sustainability-only
+  framing.
+
+5. VISUAL DIRECTION
+--------------------
+- Product photography should feel clean, natural, and food-forward — real
+  food in the container (pasta, salad, sushi, soup), warm natural light,
+  minimal props, kraft/green color accents reflecting the plant-based
+  materials.
+- No text or logos baked directly into generated images — captions/CTAs are
+  added separately in the app.
+
+6. THIS SOP APPLIES TO
+------------------------
+Every post and landing page generated for UltraGreen, across every
+platform and product line — not just whichever product is being featured
+in a specific generation run. Product-specific facts (price, size,
+compostable time, etc.) belong in that product's own requirement document,
+not here.
